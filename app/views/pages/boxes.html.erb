@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <th>Code</th>
+    <th>Contents</th>
+  </thead>
+  <tbody>
+    <% @boxes.each do |b| %>
+      <tr>
+        <td><%= b["code"] %></td>
+        <td>
+          <% b["contents"].each_with_index do |bc, index| %>
+            <%= bc %><% unless index == b["contents"].size - 1 %>,<% end %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -2,5 +2,6 @@ Rails.application.routes.draw do
   root 'users#index'
 
   resources :users
-  resources :boxes
+
+  get 'boxes' => 'pages#boxes'
 end
