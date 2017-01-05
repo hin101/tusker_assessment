@@ -1,0 +1,7 @@
+<div>
+  <%= form_for(@user, remote: true) do |f| %>
+    <%= f.label "Name" %>
+    <%= f.text_field :name %>
+    <%= f.submit "Add User" %>
+  <% end %>
+</div>
