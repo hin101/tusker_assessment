@@ -1,4 +1,4 @@
-<table>
+<table class="table">
   <thead>
     <th>Name</th>
   </thead>
@@ -6,6 +6,7 @@
     <% @users.each do |u| %>
   		<tr>
     		<td><%= u.name %></td>
+        <td><%= link_to "Delete User", user_path(u), method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-sm btn-danger' %></td>
   		</tr>
 	<% end %>
   </tbody>

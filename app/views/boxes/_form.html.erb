@@ -1,0 +1,7 @@
+<div>
+  <%= form_for(@box, remote: true) do |f| %>
+    <%= f.label "Code" %>
+    <%= f.text_field :code %>
+    <%= f.submit "Add Box" %>
+  <% end %>
+</div>
